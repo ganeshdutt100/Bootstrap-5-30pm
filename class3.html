@@ -24,10 +24,28 @@
       animation: name duration timing-function delay iteration-count direction fill-mode;
       transform: rotate(360deg);
     }
+
+    .video1 {
+      width: 500px;
+      height: 500px;
+      background-color: aqua;
+      object-fit: cover;
+    }
+
+    video {
+      object-fit: cover;
+    }
   </style>
 </head>
 
 <body>
+
+
+
+  <div class="video1">
+    <video src="https://templatemo.com/templates/templatemo_567_nomad_force/videos/814dc43e870597176cad645798825c03.mp4"
+      loop="" muted="" controls="" autoplay="" width="100%" height="100%"></video>
+  </div>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
@@ -361,6 +379,7 @@
 
   <h1>Toast</h1>
 
+
   <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
 
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
@@ -378,6 +397,32 @@
   </div>
 
 
+  <abbr title="Ganesh Dutt">hello</abbr>
+
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+    data-bs-custom-class="custom-tooltip" data-bs-title="This top tooltip is themed via CSS variables.">
+    Custom tooltip
+  </button>
+
+
+
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+    data-bs-title="Tooltip on top">
+    Tooltip on top
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right"
+    data-bs-title="Tooltip on right">
+    Tooltip on right
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom"
+    data-bs-title="Tooltip on bottom">
+    Tooltip on bottom
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left"
+    data-bs-title="Tooltip on left">
+    Tooltip on left
+  </button>
+
   <script>
     const toastTrigger = document.getElementById('liveToastBtn')
     const toastLiveExample = document.getElementById('liveToast')
@@ -388,6 +433,38 @@
         toastBootstrap.show()
       })
     }
+
+
+    const exampleEl = document.getElementById('example')
+    const tooltip = new bootstrap.Tooltip(exampleEl, options)
+  </script>
+
+
+
+
+
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+    data-bs-placement="top" data-bs-content="Top popover">
+    Popover on top
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+    data-bs-placement="right" data-bs-content="Right popover">
+    Popover on right
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+    data-bs-placement="bottom" data-bs-content="Bottom popover">
+    Popover on bottom
+  </button>
+  <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+    data-bs-placement="left" data-bs-content="Left popover">
+    Popover on left
+  </button>
+
+
+  <script>
+    const popover = new bootstrap.Popover('.example-popover', {
+      container: '.modal-body'
+    })
   </script>
 </body>
 
